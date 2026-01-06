@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTX-Bot - Документация</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.4;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #7289DA;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+        
+        h2 {
+            color: #7289DA;
+            margin: 40px 0 20px 0;
+            font-size: 24px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #333;
+        }
+        
+        h3 {
+            color: #43B581;
+            margin: 30px 0 15px 0;
+            font-size: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #1a1a1a;
+        }
+        
+        th {
+            background: #2C2F33;
+            color: #fff;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+            border: 1px solid #444;
+        }
+        
+        td {
+            padding: 10px 12px;
+            border: 1px solid #444;
+            color: #ccc;
+        }
+        
+        tr:nth-child(even) {
+            background: #222;
+        }
+        
+        tr:hover {
+            background: #2a2a2a;
+        }
+        
+        .command {
+            font-family: 'Courier New', monospace;
+            color: #43B581;
+        }
+        
+        .permission {
+            color: #FF6B6B;
+            font-size: 12px;
+            background: #2a2a2a;
+            padding: 2px 6px;
+            border-radius: 3px;
+            margin-left: 5px;
+        }
+        
+        .description {
+            color: #999;
+        }
+        
+        .usage {
+            font-family: 'Courier New', monospace;
+            color: #99AAB5;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+        
+        .category {
+            margin-bottom: 40px;
+        }
+        
+        .back-link {
+            display: inline-block;
+            color: #7289DA;
+            text-decoration: none;
+            margin-bottom: 20px;
+            padding: 5px 0;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">← На главную</a>
+        <h1>TTX-Bot Документация</h1>
+        
+        <div class="section">
+            <h2> Основные команды</h2>
+            
+            <div class="category">
+                <h3>Управление</h3>
+                <table>
+                    <tr>
+                        <th width="150">Команда</th>
+                        <th width="400">Описание</th>
+                        <th width="200">Использование</th>
+                        <th width="150">Требуемые права</th>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/help</span></td>
+                        <td class="description">Показать список доступных команд</td>
+                        <td class="usage">/help</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/setup</span></td>
+                        <td class="description">Начальная настройка бота на сервере</td>
+                        <td class="usage">/setup</td>
+                        <td>ADMINISTRATOR</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/stats</span></td>
+                        <td class="description">Показать статистику бота</td>
+                        <td class="usage">/stats</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/ping</span></td>
+                        <td class="description">Проверить задержку бота</td>
+                        <td class="usage">/ping</td>
+                        <td>—</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="category">
+                <h3>Информация</h3>
+                <table>
+                    <tr>
+                        <th width="150">Команда</th>
+                        <th width="400">Описание</th>
+                        <th width="200">Использование</th>
+                        <th width="150">Требуемые права</th>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/serverinfo</span></td>
+                        <td class="description">Информация о сервере</td>
+                        <td class="usage">/serverinfo</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/userinfo</span></td>
+                        <td class="description">Информация о пользователе</td>
+                        <td class="usage">/userinfo @пользователь</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/roleinfo</span></td>
+                        <td class="description">Информация о роли</td>
+                        <td class="usage">/roleinfo @роль</td>
+                        <td>—</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2> Модерация</h2>
+            
+            <div class="category">
+                <h3>Основные команды модерации</h3>
+                <table>
+                    <tr>
+                        <th width="150">Команда</th>
+                        <th width="400">Описание</th>
+                        <th width="200">Использование</th>
+                        <th width="150">Требуемые права</th>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/ban</span></td>
+                        <td class="description">Заблокировать пользователя на сервере</td>
+                        <td class="usage">/ban @пользователь [причина]</td>
+                        <td>BAN_MEMBERS</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/kick</span></td>
+                        <td class="description">Исключить пользователя с сервера</td>
+                        <td class="usage">/kick @пользователь [причина]</td>
+                        <td>KICK_MEMBERS</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/mute</span></td>
+                        <td class="description">Ограничить пользователя в отправке сообщений</td>
+                        <td class="usage">/mute @пользователь [время] [причина]</td>
+                        <td>MANAGE_ROLES</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/warn</span></td>
+                        <td class="description">Выдать предупреждение пользователю</td>
+                        <td class="usage">/warn @пользователь [причина]</td>
+                        <td>MANAGE_MESSAGES</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/clear</span></td>
+                        <td class="description">Удалить сообщения в канале</td>
+                        <td class="usage">/clear [количество]</td>
+                        <td>MANAGE_MESSAGES</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/lock</span></td>
+                        <td class="description">Закрыть канал для отправки сообщений</td>
+                        <td class="usage">/lock</td>
+                        <td>MANAGE_CHANNELS</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/unlock</span></td>
+                        <td class="description">Открыть канал для отправки сообщений</td>
+                        <td class="usage">/unlock</td>
+                        <td>MANAGE_CHANNELS</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="category">
+                <h3>Настройки модерации</h3>
+                <table>
+                    <tr>
+                        <th width="150">Команда</th>
+                        <th width="400">Описание</th>
+                        <th width="200">Использование</th>
+                        <th width="150">Требуемые права</th>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/automod</span></td>
+                        <td class="description">Включить/выключить авто-модерацию</td>
+                        <td class="usage">/automod [on/off]</td>
+                        <td>ADMINISTRATOR</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/logchannel</span></td>
+                        <td class="description">Установить канал для логов</td>
+                        <td class="usage">/logchannel #канал</td>
+                        <td>ADMINISTRATOR</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/warnings</span></td>
+                        <td class="description">Посмотреть предупреждения пользователя</td>
+                        <td class="usage">/warnings @пользователь</td>
+                        <td>MANAGE_MESSAGES</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2> Развлечения</h2>
+            
+            <div class="category">
+                <h3>Игры и развлечения</h3>
+                <table>
+                    <tr>
+                        <th width="150">Команда</th>
+                        <th width="400">Описание</th>
+                        <th width="200">Использование</th>
+                        <th width="150">Требуемые права</th>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/meme</span></td>
+                        <td class="description">Показать случайный мем</td>
+                        <td class="usage">/meme</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/gif</span></td>
+                        <td class="description">Поиск GIF по запросу</td>
+                        <td class="usage">/gif [запрос]</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/8ball</span></td>
+                        <td class="description">Задать вопрос волшебному шару</td>
+                        <td class="usage">/8ball [вопрос]</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/coinflip</span></td>
+                        <td class="description">Подбросить монетку</td>
+                        <td class="usage">/coinflip</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/roll</span></td>
+                        <td class="description">Бросить кости</td>
+                        <td class="usage">/roll [количество]d[стороны]</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/poll</span></td>
+                        <td class="description">Создать опрос</td>
+                        <td class="usage">/poll "Вопрос" "Вариант1" "Вариант2"</td>
+                        <td>—</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2> Экономика</h2>
+            
+            <div class="category">
+                <h3>Система экономики</h3>
+                <table>
+                    <tr>
+                        <th width="150">Команда</th>
+                        <th width="400">Описание</th>
+                        <th width="200">Использование</th>
+                        <th width="150">Требуемые права</th>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/balance</span></td>
+                        <td class="description">Посмотреть баланс</td>
+                        <td class="usage">/balance</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/daily</span></td>
+                        <td class="description">Получить ежедневную награду</td>
+                        <td class="usage">/daily</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/work</span></td>
+                        <td class="description">Выполнить работу для заработка</td>
+                        <td class="usage">/work</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/shop</span></td>
+                        <td class="description">Открыть магазин</td>
+                        <td class="usage">/shop</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/buy</span></td>
+                        <td class="description">Купить предмет из магазина</td>
+                        <td class="usage">/buy [предмет]</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/inventory</span></td>
+                        <td class="description">Посмотреть инвентарь</td>
+                        <td class="usage">/inventory</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/leaderboard</span></td>
+                        <td class="description">Таблица лидеров по балансу</td>
+                        <td class="usage">/leaderboard</td>
+                        <td>—</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2> Утилиты</h2>
+            
+            <div class="category">
+                <h3>Полезные команды</h3>
+                <table>
+                    <tr>
+                        <th width="150">Команда</th>
+                        <th width="400">Описание</th>
+                        <th width="200">Использование</th>
+                        <th width="150">Требуемые права</th>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/weather</span></td>
+                        <td class="description">Узнать погоду в городе</td>
+                        <td class="usage">/weather [город]</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/translate</span></td>
+                        <td class="description">Перевести текст</td>
+                        <td class="usage">/translate [язык] [текст]</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/timer</span></td>
+                        <td class="description">Установить таймер</td>
+                        <td class="usage">/timer [время] [сообщение]</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/remind</span></td>
+                        <td class="description">Установить напоминание</td>
+                        <td class="usage">/remind [время] [сообщение]</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/avatar</span></td>
+                        <td class="description">Показать аватар пользователя</td>
+                        <td class="usage">/avatar [@пользователь]</td>
+                        <td>—</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="category">
+                <h3>Настройки сервера</h3>
+                <table>
+                    <tr>
+                        <th width="150">Команда</th>
+                        <th width="400">Описание</th>
+                        <th width="200">Использование</th>
+                        <th width="150">Требуемые права</th>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/prefix</span></td>
+                        <td class="description">Изменить префикс команд</td>
+                        <td class="usage">/prefix [новый_префикс]</td>
+                        <td>ADMINISTRATOR</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/autorole</span></td>
+                        <td class="description">Настроить автоматическую выдачу ролей</td>
+                        <td class="usage">/autorole @роль</td>
+                        <td>ADMINISTRATOR</td>
+                    </tr>
+                    <tr>
+                        <td><span class="command">/backup</span></td>
+                        <td class="description">Создать бэкап настроек сервера</td>
+                        <td class="usage">/backup create</td>
+                        <td>ADMINISTRATOR</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

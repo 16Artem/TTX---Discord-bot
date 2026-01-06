@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TTX-Bot - {{.Title}}</title>
+    <link rel="stylesheet" href="assets/css/bulma.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="assets/js/jquery-3.6.0.js"></script>
+  </head>
+  <body>
+    <a id="backtotop" data-tippy-content="Наверх">
+      <i class="fa-solid fa-angle-up has-text-white fa-2xl mt-5"></i>
+    </a>
+
+    <nav
+      class="navbar is-fixed-top"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand mt-2 mb-2">
+        <a class="navbar-item" href="#">
+          <strong>TTX-Bot</strong>
+        </a>
+
+        <a
+          role="button"
+          class="navbar-burger has-text-white"
+          data-target="navMenu"
+          aria-label="menu"
+          aria-expanded="false"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a href="#" class="navbar-item is-tab">
+            Главная
+          </a>
+
+          <a href="#features" class="navbar-item is-tab">
+            Возможности
+          </a>
+
+          <a href="#stats" class="navbar-item is-tab">
+            Статистика
+          </a>
+
+          <a href="/docs" class="navbar-item is-tab">
+            Документация
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <a href="#" class="navbar-item is-tab" target="_blank">
+            <i class="fa-brands fa-discord"></i>
+          </a>
+
+          <a href="#" class="navbar-item is-tab" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+
+          <div class="navbar-item">
+            <div class="buttons">
+              <a href="#" class="button is-blurple">
+                <strong
+                  ><i class="fa-solid fa-right-to-bracket mr-2"></i>
+                  Войти</strong
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero bg-base is-fullheight">
+      <div class="hero-body">
+        <div class="">
+          <div class="columns">
+            <div class="column mr-6 mt-12" data-aos="fade-up">
+              <p class="title has-text-white has-text-weight-bold">
+                Улучшите свой Discord-сервер с TTX-Bot
+              </p>
+              <p class="subtitle has-text-grey-light is-size-6 mt-3">
+                TTX-Bot — это многофункциональный Discord-бот с модерацией, развлечениями, утилитами и экономикой. 
+                Простой в использовании, но мощный инструмент для управления вашим сообществом.
+              </p>
+              <div class="buttons">
+                <a href="#" class="button is-info">
+                  <strong>Добавить в Discord</strong>
+                </a>
+
+                <a href="#" class="button is-primary is-outlined">
+                  <strong><i class="fa-solid fa-crown"></i> Премиум</strong>
+                </a>
+              </div>
+            </div>
+            <div class="column mt-6" data-aos="fade-left">
+              <img
+                class="image has-image-centered vert-move mt-4"
+                src="assets/img/relaunch_day.svg"
+                alt="hero image"
+                style="width: 20rem;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="has-text-centered" data-tippy-content="Прокрутите вниз">
+        <a href="#features"
+          ><i
+            class="fa-solid fa-circle-chevron-down fa-lg vert-move2 has-text-white"
+          ></i
+        ></a>
+      </div>
+    </section>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#1a2634"
+        fill-opacity="1"
+        d="M0,288L24,261.3C48,235,96,181,144,154.7C192,128,240,128,288,149.3C336,171,384,213,432,202.7C480,192,528,128,576,133.3C624,139,672,213,720,213.3C768,213,816,139,864,101.3C912,64,960,64,1008,106.7C1056,149,1104,235,1152,240C1200,245,1248,171,1296,144C1344,117,1392,139,1416,149.3L1440,160L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"
+      ></path>
+    </svg>
+
+    <section id="features" class="section mt-6">
+      <div class="has-text-centered">
+        <h1 class="title lined">Возможности</h1>
+        <div class="line line-center blurple"></div>
+      </div>
+
+      <div class="single-feature">
+        <div class="columns mt-6">
+          <div class="column mr-6">
+            <h4 class="title">Автоматическая <span class="blurple">Модерация</span></h4>
+            <p class="subtitle mt-3">
+              Настраиваемая система модерации для защиты вашего сервера. Автоматические фильтры плохих слов, 
+              анти-спам система, авто-модерация ссылок и упоминаний. Настраивайте правила под свои нужды и 
+              поддерживайте порядок в сообществе автоматически.
+            </p>
+          </div>
+          <div class="column" data-aos="fade-left">
+            <img
+              class="image has-image-centered"
+              src="assets/img/features1.svg"
+              alt="feature1 img"
+              style="width: 23rem;"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="single-feature">
+        <div class="columns mt-6">
+          <div class="column" data-aos="fade-right">
+            <img
+              class="image has-image-centered"
+              src="assets/img/features2.svg"
+              alt="feature1 img"
+              style="width: 23rem;"
+            />
+          </div>
+          <div class="column">
+            <h4 class="title">
+              Развлекательные <span class="has-text-primary">Команды</span>
+            </h4>
+            <p class="subtitle mt-3">
+              Музыкальный плеер с поддержкой YouTube, Spotify и SoundCloud. Мини-игры, мемы, GIF-анимации, 
+              генераторы шуток и викторины. Создавайте опросы, проводите розыгрыши и поддерживайте активность 
+              на сервере с помощью разнообразных развлекательных команд.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="single-feature">
+        <div class="columns mt-6">
+          <div class="column mr-6">
+            <h4 class="title">
+              Экономическая <span class="has-text-warning">Система</span>
+            </h4>
+            <p class="subtitle mt-3">
+              Полноценная экономика с виртуальной валютой. Уровневая система с наградами, ежедневные бонусы, 
+              магазин ролей и предметов. Настраиваемые рабочие команды, криптовалютные котировки и возможность 
+              создания собственных магазинов для пользователей.
+            </p>
+          </div>
+          <div class="column" data-aos="fade-left">
+            <img
+              class="image has-image-centered"
+              src="assets/img/features3.svg"
+              alt="feature1 img"
+              style="width: 23rem;"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="single-feature">
+        <div class="columns mt-6">
+          <div class="column" data-aos="fade-right">
+            <img
+              class="image has-image-centered"
+              src="assets/img/features4.svg"
+              alt="feature1 img"
+              style="width: 23rem;"
+            />
+          </div>
+          <div class="column">
+            <h4 class="title">Утилиты и <span class="has-text-info">Кастомизация</span></h4>
+            <p class="subtitle mt-3">
+              Гибкая система ролей по реакциям, временные голосовые каналы, создание тикетов, логирование событий. 
+              Переводчик сообщений, погода, информация о пользователях и серверах. Полностью настраиваемый внешний вид 
+              и поведение бота под ваши предпочтения.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stats" class="section mt-6">
+      <div class="has-text-centered">
+        <h1 class="title lined">Статистика</h1>
+        <div class="line line-center blurple"></div>
+      </div>
+
+      <div class="columns mt-6">
+        <div class="column has-text-centered">
+          <p class="title has-text-weight-bold lined">{{.Servers}}</p>
+          <span class="subtitle has-text-weight-bold blurple"><i class="fa-solid fa-server"></i> Серверов</span>
+        </div>
+
+        <div class="column has-text-centered">
+          <p class="title has-text-weight-bold lined">{{.Commands}}</p>
+          <span class="subtitle has-text-weight-bold blurple"><i class="fa-solid fa-terminal"></i> Команд</span>
+        </div>
+
+        <div class="column has-text-centered">
+          <p class="title has-text-weight-bold lined">{{.Users}}+</p>
+          <span class="subtitle has-text-weight-bold blurple"><i class="fa-solid fa-users"></i> Пользователей</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section mt-6">
+      <div class="columns">
+        <div class="column has-text-left">
+          <p class="title has-text-weight-bold">
+            Готовы попробовать <span class="blurple">TTX-Bot</span>?
+          </p>
+          <p class="subtitle mt-3 has-text-gray">
+            Присоединяйтесь к тысячам довольных администраторов, которые уже используют TTX-Bot для улучшения 
+            своих Discord-серверов. Простая установка, интуитивное управление и круглосуточная поддержка.
+          </p>
+          <a href="https://discord.com/oauth2/authorize?client_id=1416539261888630914&integration_type=0&scope=applications.commands" class="button is-blurple is-medium"
+            ><strong><i class="fa-solid fa-book"></i> Начать</strong></a
+          >
+        </div>
+
+        <div class="column"></div>
+      </div>
+    </section>
+
+    <footer class="footer bg-base">
+      <div class="content has-text-centered has-text-white">
+        <div class="mb-2">
+          <a href="#" class="has-text-white" target="_blank">
+            <i class="fa-brands fa-discord"></i>
+          </a>
+          &nbsp; &nbsp;
+          <a href="#" class="has-text-white" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+
+        <p>
+          <span class="has-text-weight-bold">TTX-Bot</span>
+          <br />
+          &copy; <span id="cp-year"></span> Авторские права TTX-Bot Team. Все права защищены.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
